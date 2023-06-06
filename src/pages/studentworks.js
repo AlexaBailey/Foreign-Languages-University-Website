@@ -65,7 +65,7 @@ const router = useRouter()
         try {
           e.preventDefault()
           console.log("form")
-          const res = await axios.post(`http://localhost:8800/homework/${tokUser.id}/search`,{params:{id:tokUser.id},name:name});
+          const res = await axios.post(`http://localhost:8800/searchall/${tokUser.fio}`,{params:{fio:tokUser.fio},name:name});
           setbooks(res.data);
 
            console.log("Data form",res.data)

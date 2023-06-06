@@ -18,7 +18,7 @@ const urldecode = require('urldecode')
 
 
 
-//uguguygyubuybuyh
+//uguguygyubuybuyhWSA
 
 const { S3Client } = require('@aws-sdk/client-s3');
     
@@ -522,10 +522,32 @@ var q;
 
 });
 })
-app.post('/homework/:id', (req, res, next) => { 
-  const id=req.params.id 
+
+app.post('/searchall/:fio', (req, res, next) => { 
+  const fio=req.params.fio 
+  const name=req.body.name
 var q;
- q=`delete from homeworks,  users where studentid=users.id and studentid=${id};`
+ q=`select * from homeworks,  users where teacher=users.fio and teacher="${fio}" 
+ `
+ if (name){
+  q+=` and homename='${name}'`
+ }
+
+  db.query(q, (err, data) => {
+  if (err) {
+    console.log(err);
+    return res.json(err)
+    ;
+  }
+
+  return res.json(data);
+
+});
+})
+app.delete('/homework/:hid', (req, res, next) => { 
+  const id=req.params.hid 
+var q;
+ q=`delete from homeworks where hid=${id};`
 
   db.query(q, (err, data) => {
   if (err) {
@@ -564,7 +586,7 @@ app.post('/searchhomework/:id', (req, res, next) => {
   console.log(id,name)
 var q;
 
- q=`select * from homeworks,  users where studentid=users.id and studentid=${id};`
+ q=`select * from homeworks,  users where studentid=users.id and studentid=${id}`
 if (name){
   q+=` and homename='${name}'  `
 }
@@ -579,6 +601,7 @@ if (name){
 
 });
 })
+
 
 app.get('/chosen/:id', (req, res, next) => { 
   const id=req.params.id 
@@ -634,27 +657,6 @@ var q;
     
     });
     })
-app.get('/statistics/:id', (req, res, next) => {  
-  const id=req.params.id
-  var q;
-   q=`select count(userid) as slikes from preferred where writerid=${id}; select count(id) as susers from users;select count(pref) as numpref,projectid,pid, pname, discipline,publish,comments, project,writers from preferred,projects where writerid=${id} and pid=projectid group by projectid order by numpref desc limit 1;select count(userid) as activeuser,userid,id,fio  from preferred,users where writerid=${id} and userid=id group by userid limit 1;select count(pid) as yourprojects from projects where usid=4;select count(pid) as sprojects from projects;
-
-
-
-   `
-   
-  
-    db.query(q, (err, data) => {
-    if (err) {
-      console.log(err);
-      return res.json(err)
-      ;
-    }
-  
-    return res.json(data);
-  
-  });
-  })
   
 app.get('/edit/:bookid', (req, res, next) => {  
   console.log("params",req.params)

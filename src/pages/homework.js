@@ -146,6 +146,7 @@ books.map((book)=>{
             key={book.bid}
             book={book}
            tokUser={tokUser}
+           setbooks={setbooks}
             
              books={books}
           />

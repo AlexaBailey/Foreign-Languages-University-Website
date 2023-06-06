@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 import axios from 'axios'
 import setAuthToken from '../../utils/jwttok'
 import jwtDecode from 'jwt-decode'
-export default function HomeCard({book,tokUser,books}) {
+export default function HomeCard({book,tokUser,books,setbooks}) {
 
   const [more,setmore]=useState(false)
 const hid=book.hid
@@ -30,7 +30,7 @@ const hid=book.hid
     try {
       console.log("delete")
       const res = await axios.delete(`http://localhost:8800/homework/${book.hid}`,{params:{hid:book.hid}});
-        setbooks(books.filter(obj=>obj.bid!=book.bid))
+        setbooks(books.filter(obj=>obj.hid!=book.hid))
   
   
 
