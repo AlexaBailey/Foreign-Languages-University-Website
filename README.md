@@ -1,5 +1,18 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+<h1>❓ Website Purpose</h1>
+<p>Development of an educational and methodological complex of the Department of Foreign Languages for automating the educational process and providing additional opportunities for teachers and students.</p>
+<h1>🛢️ Database used</h1>
+<ul>
+<li>MySql</li>
+<li>Amazon Web Services</li>
+</ul>
+<h1>Special Features</h1>
+<p>Embedded Dictionary</p>
+<img src="https://ibb.co/mBzfJp1"/>
+<h1>Authentication and Authorization</h1>
+<img src="https://ibb.co/8dwffDM"/>
+...and many more!
 ## Getting Started
 
 First, run the development server:
