@@ -2,6 +2,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 <h1>❓ Website Purpose</h1>
 <p>Development of an educational and methodological complex of the Department of Foreign Languages for automating the educational process and providing additional opportunities for teachers and students.</p>
+<h1>🛠️Technology Stack</h1>
+<p>React, NextJS, Nodejs, jsonwebtoken, Javascript, Typescript, MySQL2</p>
 <h1>🛢️ Database used</h1>
 <ul>
 <li>MySql</li>
