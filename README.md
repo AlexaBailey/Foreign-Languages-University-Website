@@ -12,10 +12,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 <img src="https://github.com/AlexaBailey/Foreign-Languages-University-Website/assets/93386868/2bbbb895-b756-4b95-99da-54dc54782b36"/>
 
 <h1>Authentication and Authorization</h1>
- ![изображение](https://github.com/AlexaBailey/Foreign-Languages-University-Website/assets/93386868/d0a0ba23-7d01-4879-bea4-470965a62c48)
-
-
-<img src="https://ibb.co/8dwffDM"/>
+<img src="https://github.com/AlexaBailey/Foreign-Languages-University-Website/assets/93386868/d0a0ba23-7d01-4879-bea4-470965a62c48"/>
 ...and many more!
 ## Getting Started
 
