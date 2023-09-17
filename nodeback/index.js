@@ -18,7 +18,7 @@ const urldecode = require('urldecode')
 
 
 
-//uguguygyubuybuyhWSA
+
 
 const { S3Client } = require('@aws-sdk/client-s3');
     
@@ -28,8 +28,8 @@ const multerS3 = require('multer-s3');
 let s3 = new S3Client({
   region: 'us-east-1',
   credentials: {
-    accessKeyId: 'AKIAVBUPNQ5IN7SE4XUN',
-    secretAccessKey: 'UlxPIdIKr+/HaRjBQqIXax0Gpir82YDjZvKQN4Jp'
+    accessKeyId: ${yourAPIKey},
+    secretAccessKey: '${yourSecretApiKey}'
   },
  
 });
